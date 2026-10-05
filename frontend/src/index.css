@@ -1,0 +1,119 @@
+@import "tailwindcss";
+
+:root {
+  --color-bg-base: #090B0E;
+  --color-bg-subtle: #0D1014;
+  --color-surface-panel: #12161B;
+  --color-surface-card: #171C22;
+  --color-surface-elevated: #1F252E;
+  --color-surface-hover: #262E38;
+  
+  --color-border-subtle: rgba(255, 255, 255, 0.07);
+  --color-border-medium: rgba(255, 255, 255, 0.12);
+  --color-border-accent: rgba(56, 189, 248, 0.35);
+
+  --color-text-primary: #F8FAFC;
+  --color-text-secondary: #94A3B8;
+  --color-text-muted: #64748B;
+  --color-text-faint: #475569;
+
+  --color-primary: #0EA5E9;
+  --color-primary-glow: rgba(14, 165, 233, 0.25);
+  
+  --color-water: #0284C7;
+  --color-electric: #D97706;
+  --color-fiber: #9333EA;
+  --color-conflict: #EF4444;
+  --color-safe: #10B981;
+}
+
+body {
+  background-color: #090B0E;
+  color: #F8FAFC;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  letter-spacing: -0.012em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code, kbd, samp, pre, .font-mono {
+  font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+/* Precision Cockpit & Panel Materials */
+.cadastre-panel {
+  background: linear-gradient(180deg, rgba(18, 22, 27, 0.96) 0%, rgba(13, 16, 20, 0.98) 100%);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 20px 48px -12px rgba(0, 0, 0, 0.7), 
+              0 0 0 1px rgba(255, 255, 255, 0.04),
+              inset 0 1px 0 0 rgba(255, 255, 255, 0.08);
+}
+
+.cadastre-card {
+  background: rgba(23, 28, 34, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.04);
+  transition: all 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cadastre-card:hover {
+  background: rgba(31, 37, 46, 0.85);
+  border-color: rgba(255, 255, 255, 0.14);
+}
+
+.cadastre-input {
+  background-color: rgba(9, 11, 14, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  color: #F8FAFC;
+  transition: all 0.15s ease;
+}
+
+.cadastre-input:hover {
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+.cadastre-input:focus {
+  border-color: #38BDF8;
+  background-color: rgba(13, 16, 20, 0.95);
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(56, 189, 248, 0.25);
+}
+
+/* Micro-interaction Button Styles */
+.btn-tactile {
+  transition: all 0.15s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-tactile:hover {
+  transform: translateY(-1px);
+}
+
+.btn-tactile:active {
+  transform: translateY(0px) scale(0.98);
+}
+
+/* Subtle Technical Grid Lines Background */
+.bg-tech-grid {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
